@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Pulse Studio</title>
+<script src="assets/js/theme-init.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon.png">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="dash-body" data-page="dashboard" data-layout="dash">
+<div id="site-header"></div>
+<div class="dash-layout">
+  <aside class="sidebar">
+    <div class="side-label">Menu</div>
+    <nav aria-label="Dashboard">
+      <a class="active" href="#overview"><i data-ic="home"></i>Overview</a>
+      <a href="#book"><i data-ic="calendar"></i>Book Classes</a>
+      <a href="#bookings"><i data-ic="ticket"></i>My Bookings</a>
+      <a href="#pack"><i data-ic="package"></i>Pack Usage</a>
+      <a href="#renew"><i data-ic="refresh"></i>Renewal</a>
+      <a href="#payments"><i data-ic="credit-card"></i>Payments</a>
+      <a href="#profile"><i data-ic="user"></i>Profile</a>
+    </nav>
+    <div class="logout"><a href="login.html"><i data-ic="log-out"></i>Logout</a></div>
+  </aside>
+
+  <main class="dash-main">
+
+    <!-- Overview -->
+    <section id="overview" class="on">
+      <div class="dash-top">
+        <div><h1>Good morning, Maya</h1><p>Thursday, 12 November 2026 · Unlimited Monthly member</p></div>
+        <div class="dash-filters"><select id="rangeSel" aria-label="Date range"><option value="8">Last 8 weeks</option><option value="4">Last 4 weeks</option></select><a class="btn btn-primary" href="#book"><i data-ic="plus"></i>Book a class</a></div>
+      </div>
+      <div class="next-class">
+        <div class="ic-box"><i data-ic="music"></i></div>
+        <div><small>Your next class</small><h2>Sunrise Zumba · Today, 6:00 AM</h2><p>Studio A with Priya Nair · Bring a towel and water</p></div>
+        <div class="actions"><a class="btn btn-light btn-sm" href="#bookings">View booking</a></div>
+      </div>
+      <div class="dgrid">
+        <div class="panel s-3 kpi"><span class="lbl">Pack classes left</span><div class="ic-box"><i data-ic="package"></i></div><span class="val" id="kpiLeft">4</span><div class="delta"><i data-ic="trending-up"></i>of 10 in pack<span class="spark" data-spark="9,8,7,6,6,5,4"></span></div></div>
+        <div class="panel s-3 kpi"><span class="lbl">Upcoming bookings</span><div class="ic-box"><i data-ic="ticket"></i></div><span class="val" id="kpiUpcoming">3</span><div class="delta"><i data-ic="calendar"></i>next 7 days<span class="spark" data-spark="1,2,2,3,2,3,3"></span></div></div>
+        <div class="panel s-3 kpi"><span class="lbl">Classes this month</span><div class="ic-box"><i data-ic="flame"></i></div><span class="val">16</span><div class="delta"><i data-ic="trending-up"></i>+3 vs October<span class="spark" data-spark="12,14,13,17,19,16"></span></div></div>
+        <div class="panel s-3 kpi"><span class="lbl">Days until renewal</span><div class="ic-box"><i data-ic="clock"></i></div><span class="val">23</span><div class="delta"><i data-ic="refresh"></i>renews 5 Dec<span class="spark" data-spark="30,28,26,25,24,23"></span></div></div>
+        <div class="panel s-8"><div class="panel-head"><div><h3>Weekly attendance</h3><p class="sub">Classes attended vs weekly goal</p></div></div><div class="chart" id="chartWeekly"></div><div class="legend"><span><i style="background:#e5127d"></i>Attended</span><span><i style="background:var(--border)"></i>Goal</span></div></div>
+        <div class="panel s-4"><div class="panel-head"><div><h3>Class pack</h3><p class="sub">10-Class Starter Pack</p></div></div><div class="chart" id="chartPack"></div><div class="legend"><span><i style="background:#e5127d"></i>Used</span><span><i style="background:#ff6a3d"></i>Remaining</span></div></div>
+      </div>
+    </section>
+
+    <!-- Book classes -->
+    <section id="book">
+      <div class="dash-top"><div><h1>Book classes</h1><p>Reserve a spot in an upcoming session. Each booking uses one class from your pack.</p></div></div>
+      <div class="dgrid">
+        <div class="panel s-7">
+          <div class="panel-head"><div><h3>Upcoming sessions</h3><p class="sub">Sessions with open spots this week</p></div></div>
+          <div class="slot-list">
+            <div class="slot"><div class="d"><b>12</b><span>Thu</span></div><div><b>Power Aerobics</b><small>6:00 PM · Karthik Raman · 3 spots left</small></div><button class="btn btn-primary btn-sm" data-book="Power Aerobics|Thu 12 Nov, 6:00 PM|Karthik Raman|Studio A">Book</button></div>
+            <div class="slot"><div class="d"><b>13</b><span>Fri</span></div><div><b>Step Fusion</b><small>9:30 AM · Karthik Raman · 9 spots left</small></div><button class="btn btn-primary btn-sm" data-book="Step Fusion|Fri 13 Nov, 9:30 AM|Karthik Raman|Studio B">Book</button></div>
+            <div class="slot"><div class="d"><b>13</b><span>Fri</span></div><div><b>Dance Social</b><small>7:30 PM · Arjun Pillai · 11 spots left</small></div><button class="btn btn-primary btn-sm" data-book="Dance Social|Fri 13 Nov, 7:30 PM|Arjun Pillai|Studio A">Book</button></div>
+            <div class="slot"><div class="d"><b>14</b><span>Sat</span></div><div><b>Zumba Gold</b><small>6:00 PM · Divya Menon · 2 spots left</small></div><button class="btn btn-primary btn-sm" data-book="Zumba Gold|Sat 14 Nov, 6:00 PM|Divya Menon|Studio B">Book</button></div>
+            <div class="slot"><div class="d"><b>16</b><span>Mon</span></div><div><b>Sunrise Zumba</b><small>6:00 AM · Priya Nair · 6 spots left</small></div><button class="btn btn-primary btn-sm" data-book="Sunrise Zumba|Mon 16 Nov, 6:00 AM|Priya Nair|Studio A">Book</button></div>
+          </div>
+        </div>
+        <div class="panel s-5">
+          <div class="panel-head"><div><h3>November calendar</h3><p class="sub">Underlined days have bookings</p></div></div>
+          <div class="cal">
+            <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b>
+            <button class="cal-day">2</button><button class="cal-day has">3</button><button class="cal-day">4</button><button class="cal-day has">5</button><button class="cal-day">6</button><button class="cal-day has">7</button><button class="cal-day">8</button>
+            <button class="cal-day">9</button><button class="cal-day has">10</button><button class="cal-day has">11</button><button class="cal-day on">12</button><button class="cal-day has">13</button><button class="cal-day has">14</button><button class="cal-day">15</button>
+            <button class="cal-day">16</button><button class="cal-day has">17</button><button class="cal-day">18</button><button class="cal-day">19</button><button class="cal-day">20</button><button class="cal-day">21</button><button class="cal-day">22</button>
+          </div>
+          <h3 style="margin:26px 0 14px;font-size:1rem">Reminders</h3>
+          <ul class="feed"><li><span class="dot"></span><div>Bring a towel to today's Sunrise Zumba<small>Today · 6:00 AM</small></div></li><li><span class="dot"></span><div>Your membership renews on 5 Dec<small>Auto-renew is off</small></div></li><li><span class="dot"></span><div>Bollywood Fusion Masterclass on 21 Nov<small>Member price ₹540</small></div></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- My bookings -->
+    <section id="bookings">
+      <div class="dash-top"><div><h1>My bookings</h1><p>Review, cancel and search your upcoming and past sessions.</p></div></div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>All bookings</h3><p class="sub">Cancel up to 4 hours before class</p></div><input id="bookingSearch" class="search-in" type="search" placeholder="Search bookings" aria-label="Search bookings"></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Class</th><th>Date &amp; time</th><th>Instructor</th><th>Room</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="bookingsBody">
+            <tr data-state="booked"><td>Sunrise Zumba</td><td>Thu 12 Nov, 6:00 AM</td><td>Priya Nair</td><td>Studio A</td><td><span class="status st-ok">Confirmed</span></td><td><button class="btn btn-outline btn-sm" data-cancel>Cancel</button></td></tr>
+            <tr data-state="booked"><td>Low-Impact Flow</td><td>Sat 14 Nov, 9:30 AM</td><td>Divya Menon</td><td>Studio B</td><td><span class="status st-ok">Confirmed</span></td><td><button class="btn btn-outline btn-sm" data-cancel>Cancel</button></td></tr>
+            <tr data-state="booked"><td>Zumba Toning</td><td>Tue 17 Nov, 6:00 PM</td><td>Arjun Pillai</td><td>Studio A</td><td><span class="status st-wait">Waitlist</span></td><td><button class="btn btn-outline btn-sm" data-cancel>Cancel</button></td></tr>
+            <tr><td>Zumba Party</td><td>Wed 11 Nov, 7:30 PM</td><td>Priya Nair</td><td>Studio A</td><td><span class="status st-ok">Attended</span></td><td>—</td></tr>
+            <tr><td>Power Aerobics</td><td>Mon 9 Nov, 6:00 PM</td><td>Karthik Raman</td><td>Studio A</td><td><span class="status st-ok">Attended</span></td><td>—</td></tr>
+            <tr><td>Step Fusion</td><td>Sat 7 Nov, 9:30 AM</td><td>Karthik Raman</td><td>Studio B</td><td><span class="status st-bad">Missed</span></td><td>—</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <!-- Pack usage -->
+    <section id="pack">
+      <div class="dash-top"><div><h1>Pack usage</h1><p>Track classes used, calories burned and your favourite formats.</p></div></div>
+      <div class="dgrid">
+        <div class="panel s-6">
+          <div class="panel-head"><div><h3>Current pack</h3><p class="sub">10-Class Starter Pack · expires 31 Dec 2026</p></div></div>
+          <div class="pack-meta"><span><b id="packUsed">6</b> used</span><span><b id="packLeft">4</b> remaining</span></div>
+          <div class="progress"><span id="packBar" style="width:60%"></span></div>
+          <ul class="feed" style="margin-top:22px"><li><span class="dot"></span><div>Zumba Party<small>11 Nov · 1 class deducted</small></div></li><li><span class="dot"></span><div>Power Aerobics<small>9 Nov · 1 class deducted</small></div></li><li><span class="dot"></span><div>Step Fusion (cancelled)<small>2 Nov · 1 class returned</small></div></li></ul>
+        </div>
+        <div class="panel s-6"><div class="panel-head"><div><h3>Calories burned</h3><p class="sub">Estimated per month (kcal)</p></div></div><div class="chart" id="chartCal"></div></div>
+        <div class="panel s-6"><div class="panel-head"><div><h3>Monthly check-ins</h3><p class="sub">June to November 2026</p></div></div><div class="chart" id="chartTrend"></div></div>
+        <div class="panel s-6"><div class="panel-head"><div><h3>Favourite formats</h3><p class="sub">Classes by type this quarter</p></div></div><div class="chart" id="chartMix"></div><div class="legend"><span><i style="background:#e5127d"></i>Zumba 9</span><span><i style="background:#ff6a3d"></i>Aerobics 5</span><span><i style="background:#6a35e0"></i>Step 3</span><span><i style="background:#0fb5a6"></i>Low-impact 2</span></div></div>
+      </div>
+    </section>
+
+    <!-- Renewal -->
+    <section id="renew">
+      <div class="dash-top"><div><h1>Membership renewal</h1><p>Renew or switch your plan. Changes apply from your next billing date.</p></div></div>
+      <div class="dgrid">
+        <div class="panel renew s-7">
+          <div class="panel-head"><div><h3>Renew your plan</h3><p class="sub">Unlimited Monthly · renews 5 Dec 2026</p></div></div>
+          <div class="form-grid">
+            <div class="field"><label for="renewPlan">Choose a plan</label><select id="renewPlan"><option data-p="₹3,200" selected>Unlimited Monthly — ₹3,200</option><option data-p="₹8,160">Unlimited Quarterly — ₹8,160</option><option data-p="₹2,500">Starter Pack (10 classes) — ₹2,500</option><option data-p="₹4,600">Power Pack (20 classes) — ₹4,600</option></select></div>
+            <div class="field"><label>Amount due</label><div style="font-size:2rem;font-weight:900;line-height:50px" id="renewPrice">₹3,200</div></div>
+          </div>
+          <div class="actions" style="margin-top:22px"><button class="btn btn-light" id="renewBtn" type="button">Renew membership</button></div>
+          <p id="renewNote" style="margin:16px 0 0">Current plan valid until 5 Dec 2026.</p>
+        </div>
+        <div class="panel s-5">
+          <div class="panel-head"><div><h3>Plan summary</h3><p class="sub">What your membership includes</p></div></div>
+          <ul class="mini-list"><li><span>Plan</span><b>Unlimited Monthly</b></li><li><span>Guest passes</span><b>1 remaining</b></li><li><span>Pause days</span><b>14 available</b></li><li><span>Auto-renew</span><b>Off</b></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payments -->
+    <section id="payments">
+      <div class="dash-top"><div><h1>Payments</h1><p>Your invoices and recent transactions.</p></div></div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Payment history</h3><p class="sub">Latest transactions</p></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Invoice</th><th>Date</th><th>Description</th><th>Method</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>INV-2611</td><td>5 Nov 2026</td><td>Unlimited Monthly</td><td>UPI</td><td>₹3,200</td><td><span class="status st-ok">Paid</span></td></tr>
+            <tr><td>INV-2610</td><td>5 Oct 2026</td><td>Unlimited Monthly</td><td>Card ••4821</td><td>₹3,200</td><td><span class="status st-ok">Paid</span></td></tr>
+            <tr><td>INV-2609</td><td>14 Sep 2026</td><td>10-Class Starter Pack</td><td>UPI</td><td>₹2,500</td><td><span class="status st-ok">Paid</span></td></tr>
+            <tr><td>INV-2608</td><td>5 Aug 2026</td><td>Workshop: Bollywood Fusion</td><td>Card ••4821</td><td>₹600</td><td><span class="status st-wait">Refund pending</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile">
+      <div class="dash-top"><div><h1>Profile</h1><p>Your member details and recent activity.</p></div></div>
+      <div class="dgrid">
+        <div class="panel s-6">
+          <div class="panel-head"><div><h3>Member details</h3><p class="sub">Member since March 2024</p></div></div>
+          <ul class="mini-list"><li><span>Name</span><b>Maya Rao</b></li><li><span>Member ID</span><b>PS-20481</b></li><li><span>Email</span><b>maya.rao@example.com</b></li><li><span>Mobile</span><b>+91 98430 22115</b></li></ul>
+        </div>
+        <div class="panel s-6">
+          <div class="panel-head"><div><h3>Recent activity</h3><p class="sub">Your latest updates</p></div></div>
+          <ul class="feed">
+            <li><span class="dot"></span><div>Attended Zumba Party<small>Yesterday · 7:30 PM</small></div></li>
+            <li><span class="dot"></span><div>Payment received, ₹3,200<small>5 Nov · UPI</small></div></li>
+            <li><span class="dot"></span><div>Attended Power Aerobics<small>9 Nov · 6:00 PM</small></div></li>
+            <li><span class="dot"></span><div>Earned the 16-classes badge<small>10 Nov</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

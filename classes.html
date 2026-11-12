@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classes — Pulse Studio</title>
+<meta name="description" content="Browse Zumba, aerobics, step and low-impact classes with levels, durations and a day-by-day timetable.">
+<script src="assets/js/theme-init.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon.png">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body data-page="classes" data-layout="public">
+<div id="site-header"></div>
+<main>
+
+<!-- 1. Hero -->
+<section class="hero-bg page-hero" data-slot="classes-hero-bg" style="--hero-img:url('../images/classes-hero-bg.jpg')">
+  <div class="container">
+    <div class="crumbs">Home <i data-ic="chevron-right"></i> Classes</div>
+    <h1>Classes for every mood and level</h1>
+    <p>Fifteen class styles and forty-eight sessions a week. Find your favourite and book in seconds.</p>
+  </div>
+</section>
+
+<!-- 2. Catalogue -->
+<section class="section" id="catalogue">
+  <div class="container">
+    <div class="finder-bar">
+      <div class="chips" data-filter-group="#classGrid"><button class="chip on" data-f="all">All</button><button class="chip" data-f="zumba">Zumba</button><button class="chip" data-f="aerobics">Aerobics</button><button class="chip" data-f="step">Step</button><button class="chip" data-f="gentle">Low-impact</button></div>
+      <input class="search-in" type="search" placeholder="Search classes" aria-label="Search classes" data-filter-search>
+    </div>
+    <p style="margin-bottom:24px"><b id="classCount">15</b> classes shown</p>
+    <div class="grid grid-3" id="classGrid">
+      <article class="card class-card" data-cat="zumba"><div class="img-slot" data-slot="class-zumba-party"><img src="assets/images/class-zumba-party.jpg" alt="Class zumba party" loading="lazy" decoding="async"></div><span class="img-badge">High energy</span><div class="meta"><span class="tag">Zumba</span></div><h3>Zumba Party</h3><p>Our signature dance party with Latin and Bollywood hits.</p><div class="cmeta"><span><i data-ic="clock"></i>60 min</span><span><i data-ic="flame"></i>600 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="zumba"><div class="img-slot" data-slot="class-sunrise-zumba"><img src="assets/images/class-sunrise-zumba.jpg" alt="Class sunrise zumba" loading="lazy" decoding="async"></div><span class="img-badge">Medium</span><div class="meta"><span class="tag">Zumba</span></div><h3>Sunrise Zumba</h3><p>An early-morning boost with upbeat music and simple moves.</p><div class="cmeta"><span><i data-ic="clock"></i>50 min</span><span><i data-ic="flame"></i>450 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="zumba"><div class="img-slot" data-slot="class-zumba-gold"><img src="assets/images/class-zumba-gold.jpg" alt="Class zumba gold" loading="lazy" decoding="async"></div><span class="img-badge">Gentle</span><div class="meta"><span class="tag">Zumba</span></div><h3>Zumba Gold</h3><p>Slower-paced dance fitness ideal for active older adults.</p><div class="cmeta"><span><i data-ic="clock"></i>45 min</span><span><i data-ic="flame"></i>300 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="zumba"><div class="img-slot" data-slot="class-zumba-toning"><img src="assets/images/class-zumba-toning.jpg" alt="Class zumba toning" loading="lazy" decoding="async"></div><span class="img-badge">Strength</span><div class="meta"><span class="tag">Zumba</span></div><h3>Zumba Toning</h3><p>Dance cardio with light toning sticks for sculpted arms and core.</p><div class="cmeta"><span><i data-ic="clock"></i>55 min</span><span><i data-ic="flame"></i>500 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="zumba"><div class="img-slot" data-slot="class-dance-social"><img src="assets/images/class-dance-social.jpg" alt="Class dance social" loading="lazy" decoding="async"></div><span class="img-badge">Social</span><div class="meta"><span class="tag">Zumba</span></div><h3>Dance Social</h3><p>A Friday-night freestyle floor with partner games and a DJ set.</p><div class="cmeta"><span><i data-ic="clock"></i>60 min</span><span><i data-ic="flame"></i>420 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="zumba"><div class="img-slot" data-slot="class-salsa-night"><img src="assets/images/class-salsa-night.jpg" alt="Class salsa night" loading="lazy" decoding="async"></div><span class="img-badge">Medium</span><div class="meta"><span class="tag">Zumba</span></div><h3>Salsa Night</h3><p>Learn salsa basics and turn them into a sweaty, joyful workout.</p><div class="cmeta"><span><i data-ic="clock"></i>50 min</span><span><i data-ic="flame"></i>430 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="aerobics"><div class="img-slot" data-slot="class-power-aerobics"><img src="assets/images/class-power-aerobics.jpg" alt="Class power aerobics" loading="lazy" decoding="async"></div><span class="img-badge">High energy</span><div class="meta"><span class="tag">Aerobics</span></div><h3>Power Aerobics</h3><p>Fast cardio sequences to build stamina and burn calories.</p><div class="cmeta"><span><i data-ic="clock"></i>55 min</span><span><i data-ic="flame"></i>550 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="aerobics"><div class="img-slot" data-slot="class-aerobics-basics"><img src="assets/images/class-aerobics-basics.jpg" alt="Class aerobics basics" loading="lazy" decoding="async"></div><span class="img-badge">Medium</span><div class="meta"><span class="tag">Aerobics</span></div><h3>Aerobics Basics</h3><p>Learn classic aerobic steps at a friendly, confidence-building pace.</p><div class="cmeta"><span><i data-ic="clock"></i>45 min</span><span><i data-ic="flame"></i>380 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="aerobics"><div class="img-slot" data-slot="class-hiit-burn"><img src="assets/images/class-hiit-burn.jpg" alt="Class hiit burn" loading="lazy" decoding="async"></div><span class="img-badge">High energy</span><div class="meta"><span class="tag">Aerobics</span></div><h3>HIIT Burn</h3><p>Short, explosive intervals set to fast beats for maximum burn.</p><div class="cmeta"><span><i data-ic="clock"></i>40 min</span><span><i data-ic="flame"></i>520 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="step"><div class="img-slot" data-slot="class-step-fusion"><img src="assets/images/class-step-fusion.jpg" alt="Class step fusion" loading="lazy" decoding="async"></div><span class="img-badge">Medium</span><div class="meta"><span class="tag">Step</span></div><h3>Step Fusion</h3><p>Choreographed step routines that tone legs and glutes.</p><div class="cmeta"><span><i data-ic="clock"></i>50 min</span><span><i data-ic="flame"></i>480 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="step"><div class="img-slot" data-slot="class-step-express"><img src="assets/images/class-step-express.jpg" alt="Class step express" loading="lazy" decoding="async"></div><span class="img-badge">Medium</span><div class="meta"><span class="tag">Step</span></div><h3>Step Express</h3><p>A quick 40-minute step session that fits a lunch break.</p><div class="cmeta"><span><i data-ic="clock"></i>40 min</span><span><i data-ic="flame"></i>400 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="step"><div class="img-slot" data-slot="class-step-sculpt"><img src="assets/images/class-step-sculpt.jpg" alt="Class step sculpt" loading="lazy" decoding="async"></div><span class="img-badge">Strength</span><div class="meta"><span class="tag">Step</span></div><h3>Step &amp; Sculpt</h3><p>Step cardio blended with light-weight sculpting for the whole body.</p><div class="cmeta"><span><i data-ic="clock"></i>55 min</span><span><i data-ic="flame"></i>500 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="gentle"><div class="img-slot" data-slot="class-low-impact"><img src="assets/images/class-low-impact.jpg" alt="Class low impact" loading="lazy" decoding="async"></div><span class="img-badge">Gentle</span><div class="meta"><span class="tag">Low-impact</span></div><h3>Low-Impact Flow</h3><p>Joint-friendly movement for mobility, balance and recovery.</p><div class="cmeta"><span><i data-ic="clock"></i>50 min</span><span><i data-ic="flame"></i>280 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="gentle"><div class="img-slot" data-slot="class-gentle-stretch"><img src="assets/images/class-gentle-stretch.jpg" alt="Class gentle stretch" loading="lazy" decoding="async"></div><span class="img-badge">Gentle</span><div class="meta"><span class="tag">Low-impact</span></div><h3>Gentle Stretch &amp; Balance</h3><p>Slow stretching and balance work to release tension and improve posture.</p><div class="cmeta"><span><i data-ic="clock"></i>45 min</span><span><i data-ic="flame"></i>200 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+      <article class="card class-card" data-cat="gentle"><div class="img-slot" data-slot="class-chair-fitness"><img src="assets/images/class-chair-fitness.jpg" alt="Class chair fitness" loading="lazy" decoding="async"></div><span class="img-badge">Gentle</span><div class="meta"><span class="tag">Low-impact</span></div><h3>Chair Fitness</h3><p>Seated and standing moves for beginners, seniors and recovery.</p><div class="cmeta"><span><i data-ic="clock"></i>40 min</span><span><i data-ic="flame"></i>180 kcal</span></div><a class="btn btn-primary btn-sm" href="login.html">Book class</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Timetable with day tabs -->
+<section class="section alt">
+  <div class="container" data-tabs>
+    <div class="sec-head"><span class="eyebrow">Timetable</span><h2>Plan your week</h2></div>
+    <div class="tabs"><button class="tab-btn on" data-t="d-mon">Mon</button><button class="tab-btn" data-t="d-tue">Tue</button><button class="tab-btn" data-t="d-wed">Wed</button><button class="tab-btn" data-t="d-thu">Thu</button><button class="tab-btn" data-t="d-fri">Fri</button><button class="tab-btn" data-t="d-sat">Sat</button></div>
+    <div id="d-mon" class="tab-panel on"><div class="table-wrap"><table><thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th></tr></thead><tbody>
+      <tr><td>6:00 AM</td><td>Sunrise Zumba</td><td>Priya Nair</td><td>Beginner</td><td><span class="status st-ok">4 left</span></td></tr>
+      <tr><td>9:30 AM</td><td>Low-Impact Flow</td><td>Divya Menon</td><td>Beginner</td><td><span class="status st-ok">7 left</span></td></tr>
+      <tr><td>6:00 PM</td><td>Power Aerobics</td><td>Karthik Raman</td><td>Intermediate</td><td><span class="status st-wait">3 left</span></td></tr></tbody></table></div></div>
+    <div id="d-tue" class="tab-panel"><div class="table-wrap"><table><thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th></tr></thead><tbody>
+      <tr><td>6:00 AM</td><td>Power Aerobics</td><td>Karthik Raman</td><td>Intermediate</td><td><span class="status st-ok">8 left</span></td></tr>
+      <tr><td>9:30 AM</td><td>Step Fusion</td><td>Karthik Raman</td><td>Intermediate</td><td><span class="status st-ok">9 left</span></td></tr>
+      <tr><td>7:30 PM</td><td>Aerobics Basics</td><td>Nisha Thomas</td><td>Beginner</td><td><span class="status st-ok">10 left</span></td></tr></tbody></table></div></div>
+    <div id="d-wed" class="tab-panel"><div class="table-wrap"><table><thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th></tr></thead><tbody>
+      <tr><td>6:00 AM</td><td>Sunrise Zumba</td><td>Priya Nair</td><td>Beginner</td><td><span class="status st-ok">6 left</span></td></tr>
+      <tr><td>6:00 PM</td><td>Step Fusion</td><td>Karthik Raman</td><td>Intermediate</td><td><span class="status st-wait">2 left</span></td></tr>
+      <tr><td>7:30 PM</td><td>Zumba Party</td><td>Priya Nair</td><td>All levels</td><td><span class="status st-bad">Full</span></td></tr></tbody></table></div></div>
+    <div id="d-thu" class="tab-panel"><div class="table-wrap"><table><thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th></tr></thead><tbody>
+      <tr><td>9:30 AM</td><td>Power Aerobics</td><td>Karthik Raman</td><td>Intermediate</td><td><span class="status st-ok">9 left</span></td></tr>
+      <tr><td>6:00 PM</td><td>Zumba Party</td><td>Priya Nair</td><td>All levels</td><td><span class="status st-wait">3 left</span></td></tr>
+      <tr><td>7:30 PM</td><td>Zumba Toning</td><td>Arjun Pillai</td><td>All levels</td><td><span class="status st-ok">8 left</span></td></tr></tbody></table></div></div>
+    <div id="d-fri" class="tab-panel"><div class="table-wrap"><table><thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th></tr></thead><tbody>
+      <tr><td>6:00 AM</td><td>Sunrise Zumba</td><td>Priya Nair</td><td>Beginner</td><td><span class="status st-ok">5 left</span></td></tr>
+      <tr><td>9:30 AM</td><td>Low-Impact Flow</td><td>Divya Menon</td><td>Beginner</td><td><span class="status st-ok">11 left</span></td></tr>
+      <tr><td>7:30 PM</td><td>Dance Social</td><td>Arjun Pillai</td><td>All levels</td><td><span class="status st-ok">11 left</span></td></tr></tbody></table></div></div>
+    <div id="d-sat" class="tab-panel"><div class="table-wrap"><table><thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th></tr></thead><tbody>
+      <tr><td>9:30 AM</td><td>Aerobics Basics</td><td>Nisha Thomas</td><td>Beginner</td><td><span class="status st-ok">12 left</span></td></tr>
+      <tr><td>11:00 AM</td><td>Zumba Party</td><td>Priya Nair</td><td>All levels</td><td><span class="status st-wait">4 left</span></td></tr>
+      <tr><td>6:00 PM</td><td>Zumba Gold</td><td>Divya Menon</td><td>Beginner</td><td><span class="status st-wait">2 left</span></td></tr></tbody></table></div></div>
+  </div>
+</section>
+
+<!-- 4. Level guide -->
+<section class="section">
+  <div class="container">
+    <div class="sec-head center"><span class="eyebrow">Choose your level</span><h2>Not sure where to start?</h2><p>Match a class to your fitness level today. You can switch whenever you like.</p></div>
+    <div class="grid grid-3">
+      <article class="level"><div class="dots"><i class="on"></i><i></i><i></i></div><h3>Beginner</h3><p>New to dance fitness or returning after a break. Slower tempo, clear cues and plenty of rest.</p><span class="tag">Zumba Gold · Aerobics Basics · Low-Impact</span></article>
+      <article class="level"><div class="dots"><i class="on"></i><i class="on"></i><i></i></div><h3>Intermediate</h3><p>Comfortable with a 45-minute cardio session. Faster sequences with more complex choreography.</p><span class="tag violet">Power Aerobics · Step Fusion</span></article>
+      <article class="level"><div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></div><h3>All levels</h3><p>High-energy parties with modifications shown for every move, so everyone can join in.</p><span class="tag">Zumba Party · Toning · Dance Social</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Calories -->
+<section class="section soft">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">What to expect</span>
+      <h2>How much does a class burn?</h2>
+      <p>Average calories burned per session for a 60 kg adult, based on instructor heart-rate monitoring across 400 classes.</p>
+      <a class="btn btn-primary" href="create-account.html">Try a free class</a>
+    </div>
+    <div class="kcal">
+      <div class="kcal-row"><span>Zumba Party</span><div class="kcal-bar"><span style="width:100%"></span></div><em>600 kcal</em></div>
+      <div class="kcal-row"><span>Power Aerobics</span><div class="kcal-bar"><span style="width:92%"></span></div><em>550 kcal</em></div>
+      <div class="kcal-row"><span>Zumba Toning</span><div class="kcal-bar"><span style="width:83%"></span></div><em>500 kcal</em></div>
+      <div class="kcal-row"><span>Step Fusion</span><div class="kcal-bar"><span style="width:80%"></span></div><em>480 kcal</em></div>
+      <div class="kcal-row"><span>Low-Impact Flow</span><div class="kcal-bar"><span style="width:47%"></span></div><em>280 kcal</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Private & corporate -->
+<section class="section">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Beyond the schedule</span><h2>Private and group sessions</h2></div>
+    <div class="private">
+      <article class="card"><div class="ic-box"><i data-ic="briefcase"></i></div><h3>Corporate wellness</h3><p>On-site or in-studio sessions for teams of 15 to 60. Includes a coach, speakers and a custom playlist.</p><a class="text-link" href="contact.html">Enquire <i data-ic="arrow-right"></i></a></article>
+      <article class="card"><div class="ic-box"><i data-ic="gift"></i></div><h3>Parties &amp; celebrations</h3><p>Birthdays, bridal showers and farewells with a themed dance class and a studio lounge for snacks.</p><a class="text-link" href="contact.html">Enquire <i data-ic="arrow-right"></i></a></article>
+      <article class="card"><div class="ic-box"><i data-ic="graduation"></i></div><h3>School &amp; college workshops</h3><p>Fun fitness sessions for students with age-appropriate routines and teacher-friendly pricing.</p><a class="text-link" href="contact.html">Enquire <i data-ic="arrow-right"></i></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CTA -->
+<section class="section alt">
+  <div class="container">
+    <div class="band center">
+      <h2>Reserve your spot</h2>
+      <p style="max-width:520px;margin-inline:auto">Members book directly from the dashboard. New here? Create an account and your first class is free.</p>
+      <div class="actions" style="justify-content:center"><a class="btn btn-light" href="login.html">Member Login</a><a class="btn btn-ghost-light" href="membership.html">See Memberships</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

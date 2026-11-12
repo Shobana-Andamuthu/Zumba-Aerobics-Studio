@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create Account — Pulse Studio</title>
+<script src="assets/js/theme-init.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon.png">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body data-page="create" data-layout="auth">
+<div id="site-header"></div>
+<main class="auth-main">
+  <section class="auth-visual" data-slot="register-visual" style="background:linear-gradient(0deg,rgba(26,11,51,.35),rgba(26,11,51,.1)),url('assets/images/register-visual.jpg') center/cover no-repeat">
+    <div class="caption"><h2>Your first class is free</h2><p>Create your account, pick a plan and book your spot on the dance floor.</p>
+      <ul class="checklist" style="margin:0"><li>No payment details needed</li><li>Join 2,400+ members</li><li>Cancel or pause any time</li></ul></div>
+  </section>
+  <section class="auth-panel">
+    <div class="auth-form">
+      <h1>Create account</h1>
+      <p>Join the community dancing at Pulse Studio.</p>
+      <form data-form="register" novalidate>
+        <div class="field"><label for="rn">Full name</label><input id="rn" type="text" required placeholder="Your full name" autocomplete="name"><span class="err">Please enter your name</span></div>
+        <div class="field"><label for="re">Email address</label><input id="re" type="email" required placeholder="you@example.com" autocomplete="email"><span class="err">Enter a valid email address</span></div>
+        <div class="field"><label for="rph">Phone number</label><input id="rph" type="tel" required minlength="10" placeholder="+91 98765 43210" autocomplete="tel"><span class="err">Enter a valid phone number</span></div>
+        <div class="field"><label for="rp">Password</label><div class="pw-wrap"><input id="rp" type="password" required minlength="8" placeholder="At least 8 characters" autocomplete="new-password"><button type="button" class="pw-toggle" aria-label="Show password"></button></div><span class="err">Password must be at least 8 characters</span></div>
+        <div class="field"><label for="rc">Confirm password</label><div class="pw-wrap"><input id="rc" type="password" required data-match="#rp" placeholder="Re-enter your password" autocomplete="new-password"><button type="button" class="pw-toggle" aria-label="Show password"></button></div><span class="err">Passwords do not match</span></div>
+        <div class="field" style="margin-bottom:22px"><label class="check"><input type="checkbox" required> I agree to the Terms and Conditions and Privacy Policy</label><span class="err">Please accept the terms to continue</span></div>
+        <button class="btn btn-primary btn-block" type="submit">Create Account</button>
+      </form>
+      <p class="auth-alt">Already have an account? <a class="link" href="login.html">Sign In</a></p>
+    </div>
+  </section>
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
