@@ -753,3 +753,8 @@ table { min-width: 0; }
 .feat-quote .person { margin-top: 8px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .2); }
 .feat-quote .person strong { color: #fff; }
 .feat-quote .person span { color: #d9cdf0; }
+
+/* Face-focused framing for portrait avatars (photos are hotlinked, framing varies) */
+.person .img-slot > img { object-position: 50% 15%; transform: scale(1.35); transform-origin: 50% 15%; }
+.team-mini .img-slot > img { object-position: 50% 14%; transform: scale(1.12); transform-origin: 50% 14%; }
+.leader .img-slot > img { object-position: 50% 18%; }
